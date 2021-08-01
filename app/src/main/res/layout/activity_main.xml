@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!--    <Button-->
+<!--        android:id="@+id/deleteAudio"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginEnd="75dp"-->
+<!--        android:text="Remove PCM"-->
+<!--        android:textColor="@android:color/white" />-->
+
+    <Button
+        android:id="@+id/startAudio"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="60dp"
+        android:layout_toStartOf="@+id/stopAudio"
+        app:icon="@drawable/ic_record"
+        app:iconTint="@color/white" />
+
+    <Button
+        android:id="@+id/stopAudio"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="60dp"
+        android:layout_toStartOf="@+id/txtcenter"
+        android:enabled="false"
+        app:icon="@drawable/ic_stoprecord"
+        app:iconTint="@color/white" />
+
+    <Button
+        android:id="@+id/playAudio"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="60dp"
+        android:layout_toEndOf="@+id/txtcenter"
+        android:enabled="false"
+        app:icon="@drawable/ic_play"
+        app:iconTint="@color/white" />
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="60dp"
+        android:layout_toEndOf="@+id/playAudio"
+        android:onClick="onClick"
+        app:icon="@drawable/ic_confirm"
+        app:iconTint="@color/white" />
+
+    <ScrollView
+        android:id="@+id/mScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/stopAudio"
+
+        android:layout_marginTop="310dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/tv_audio_succeess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_light"
+            android:text="loading finished...."
+            android:elegantTextHeight="true"/>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/edtTxtCaption"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+
+        android:fontFamily="@font/comfortaa_light"
+        android:hint="@string/edit_text"
+        android:inputType="textShortMessage" />
+
+    <TextView
+        android:id="@+id/txtcenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:text="TextView" />
+
+    <!--    <TextView-->
+<!--        android:id="@+id/txtCaption"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="250dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:fontFamily="@font/comfortaa_light"-->
+<!--        android:text="Your caption"-->
+<!--        android:textSize="24sp" />-->
+
+
+</RelativeLayout>
